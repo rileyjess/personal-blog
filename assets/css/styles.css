@@ -1,0 +1,19 @@
+/* Light theme - default */
+:root{
+    --light-theme-background: #fff;
+    --light-theme-text: #000000;
+}
+
+/* Dark theme */
+body.dark-theme {
+    --dark-theme-background: #000000;
+    --dark-theme-text: #fff;
+}
+
+* {
+   font-family: Arial, Helvetica, sans-serif;
+   background-color: var(--light-theme-background);
+   margin: 0;
+   padding: 0
+}
+
