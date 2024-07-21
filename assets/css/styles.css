@@ -2,18 +2,91 @@
 :root{
     --light-theme-background: #fff;
     --light-theme-text: #000000;
+    --light-theme-button-color: #000000;
+    --light-theme-button-text-color: #fff;
 }
 
 /* Dark theme */
 body.dark-theme {
     --dark-theme-background: #000000;
     --dark-theme-text: #fff;
+    --dark-theme-button-color: #fff;
+    --dark-theme-button-text-color: #000000;
 }
 
+/* Universal styles */
 * {
    font-family: Arial, Helvetica, sans-serif;
    background-color: var(--light-theme-background);
    margin: 0;
-   padding: 0
+   padding: 0;
+   transition: background-color .25s, color .24s;
+   box-sizing: border-box;
 }
 
+
+body {
+    margin-right: 5px;
+    border-right-color: #000000;
+    border-right-width: 5px;
+}
+
+/* Navigation */
+
+    /* Justifying the header content to the right and giving it a double border */
+    header {
+        display:flex;
+        justify-content: right;
+        height: 60px;
+        align-items: center;
+        border-bottom-color: #000000;
+        border-bottom-style: double;
+        border-bottom-width: 10px;
+    }
+
+    /* The theme toggle button needs to have a transparent background and no outline */
+    .theme-toggle-btn {
+        border-color: none;
+        background-color: transparent;
+        outline: none;
+    }
+
+main {
+    display: flex;
+}
+
+/* The left side panel */
+    aside {
+        padding: 120px;
+        border-right-color: #000000;
+        border-right-style: double;
+        border-right-width: 10px;
+    }
+
+    /* Making the section a circle, giving it a yellow gradient, and alignin the text within it */
+    .yellow-circle {
+        border-radius: 50%;
+        height: 500px;
+        width: 500px;
+        background: linear-gradient(#FFE191, #FFB901, #8E6700);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* The "My First Blog" header */
+    h1 {
+        background-color: transparent;
+        font-size: 50px;
+        color: #fff;
+        text-shadow: 1px 1px #000000;
+        text-align: center;
+}
+
+/* The right side panel */
+    .right-side {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
