@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./assets/css/styles.css">
+  <title>My Blog</title>
+</head>
+
+<body>
+  <header>
+    <!-- The navigation bar includes a button that toggles the theme from light to dark -->
+    <nav>
+     <button id="theme-toggle-btn">
+        <p>☀️</p>
+        <p>🌙</p>
+     </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- The left side of the page has the main header within a yellow circle -->
+    <aside class="left-side">
+        <section class="yellow-circle">
+            <h1>My First Blog</h1>
+        </section>
+    </aside>
+
+    <!-- The right side includes three forms to collect a username, blog title, and blog content -->
+    <section class="right-side"> 
+        <h2>What's on your mind?</h2>
+
+        <form>
+            <ul>
+              <li>
+                <label class="text-below" for="name">Username</label>
+                <input type="text" id="username" name="user-name">
+              </li>
+              <li>
+                <label class="text-below" for="title">Title</label>
+                <input type="text" id="blogtitle" name="blog-title">
+              </li>
+              <li>
+                <label class="text-below" for="content">Content</label>
+                <input type="text" id="blogcontent" name="blog-content">
+              </li>
+            </ul>
+            <div class="text-center">
+              <button type="submit">Submit</button>
+            </div>
+          </form>
+    </section>
+
+  </main>
+    
+</body>
+</html>
