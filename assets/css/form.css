@@ -1,0 +1,73 @@
+/* Light theme - default */
+:root{
+    --light-theme-background: #fff;
+    --light-theme-text: #000000;
+    --light-theme-button-color: #000000;
+    --light-theme-button-text-color: #fff;
+    --light-theme-input-border: lightgray;
+}
+
+/* Dark theme */
+body.dark-theme {
+    --dark-theme-background: #000000;
+    --dark-theme-text: #fff;
+    --dark-theme-button-color: #fff;
+    --dark-theme-button-text-color: #000000;
+    --dark-theme-input-border: #fff;
+}
+
+/* Form width */
+form {
+    width: 90%;
+    color: var(--light-theme-text);
+}
+
+h2 {
+    padding: 20px;
+}
+
+/* List styling to remove bullet points */
+ul {
+    list-style: none;
+}
+
+label {
+ font-size: 10px;
+}
+
+/* Input boxes have a solid border  */
+input {
+    width: 100%;
+    margin: 8px 0;
+    padding: 8px 8px;
+    box-sizing: border-box;
+    border: 1px solid var(--light-theme-input-border);
+    border-radius: 4px;
+    background-color: transparent;
+    font-size: 12px;
+}
+
+/* The last input box should resize vertically */
+#blogcontent {
+    resize: vertical;
+    height: 75px;
+    width: 100%;
+    margin: 8px 0;
+    padding: 8px 8px;
+    box-sizing: border-box;
+    border: 1px solid var(--light-theme-input-border);
+    border-radius: 4px;
+    background-color: transparent;
+    font-size: 12px;
+}
+
+/* Submit button */
+.submit-button {
+    width: 100%;
+    background-color: var(--light-theme-button-color);
+    color: var(--light-theme-button-text-color);
+    font-size: 10px;
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 4px;
+}
