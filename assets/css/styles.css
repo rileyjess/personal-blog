@@ -4,6 +4,7 @@
     --light-theme-text: #000000;
     --light-theme-button-color: #000000;
     --light-theme-button-text-color: #fff;
+    --light-theme-border-color: #000000;
 }
 
 /* Dark theme */
@@ -27,7 +28,7 @@ body.dark-theme {
 
 body {
     margin-right: 5px;
-    border-right-color: #000000;
+    border-right-color: var(--light-theme-border-color);
     border-right-width: 5px;
     border-style: solid;
 }
@@ -40,7 +41,7 @@ body {
         justify-content: right;
         height: 60px;
         align-items: center;
-        border-bottom-color: #000000;
+        border-bottom-color: var(--light-theme-border-color);
         border-bottom-style: double;
         border-bottom-width: 10px;
     }
@@ -60,7 +61,7 @@ main {
 /* The left side panel */
     aside {
         padding: 120px;
-        border-right-color: #000000;
+        border-right-color: var(--light-theme-border-color);
         border-right-style: double;
         border-right-width: 10px;
     }
