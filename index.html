@@ -8,13 +8,14 @@
   <title>My Blog</title>
 </head>
 
-<body>
+<body id="body">
+ <container class="container">
   <header>
     <!-- The navigation bar includes a button that toggles the theme from light to dark -->
     <nav>
      <button class="theme-toggle-btn">
-        <p>☀️</p>
-        <p>🌙</p>
+        <p class="sun">☀️</p>
+        <p class="moon">🌙</p>
      </button>
     </nav>
   </header>
@@ -47,11 +48,12 @@
                 <textarea id="blogcontent" name="blog-content"></textarea>
               </li>
             </ul>
-            <button type="submit" class="submit-button">Submit</button>
+            <button type="submit" class="submit-btn">Submit</button>
           </form>
     </section>
 
   </main>
+ </container>
     
   <script src="./assets/js/logic.js"></script>
   <script src="./assets/js/form.js"></script>

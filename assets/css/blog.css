@@ -48,13 +48,13 @@ body {
         justify-content: space-between;
     }
 
-    .nav-buttons {
+    .nav-btns {
         display: flex;
         align-items: center;
     }
 
     /* Back button */
-    .back-button {
+    .back-btn {
         border-color: transparent;
         outline: none;
         background-color: var(--light-theme-button-color);
