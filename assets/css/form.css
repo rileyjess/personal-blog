@@ -7,7 +7,7 @@
     border: 1px solid lightgray;
 }
 
-.light #blogcontent {
+.light #blog-content {
     border: 1px solid lightgray;
 }
 
@@ -25,7 +25,7 @@
     border: 1px solid #fff;
 }
 
-.dark #blogcontent {
+.dark #blog-content {
     border: 1px solid #fff;
 }
 
@@ -65,7 +65,7 @@ input {
 }
 
 /* The last input box should resize vertically */
-#blogcontent {
+#blog-content {
     resize: vertical;
     height: 75px;
     width: 100%;

@@ -1,3 +1,5 @@
+// Theme Switch
+
 // Access toggle button HTML element
 
 const mainContent = document.querySelector('#body');
