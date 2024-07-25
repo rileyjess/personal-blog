@@ -1,23 +1,66 @@
-/* Light theme - default */
-:root{
-    --light-theme-background: #fff;
-    --light-theme-text: #000000;
-    --light-theme-button-color: #000000;
-    --light-theme-button-text-color: #fff;
+/* Light theme */
+
+.light header {
+    border-bottom-color: #000000;
+    background-color: #fff;
+}
+
+.light .back-btn {
+    background-color: #fff;
+    color: #000000;
+}
+
+.light .moon {
+    display: none;
+}
+
+.light .blog-container {
+    border-right-color: #000000;
+    background-color: #fff;
+    color: #000000;
+    border-bottom-color: #000000;
+}
+
+.light footer {
+   background-color: #fff;
+   color: #000000;
 }
 
 /* Dark theme */
-body.dark-theme {
-    --dark-theme-background: #000000;
-    --dark-theme-text: #fff;
-    --dark-theme-button-color: #fff;
-    --dark-theme-button-text-color: #000000;
+
+.dark header {
+    border-bottom-color: #fff;
+    background-color: #000000;
+}
+
+.dark .blog-container {
+    border-right-color: #fff;
+    background-color: #000000;
+    color: #fff;
+    border-bottom-color: #fff;
+}
+
+.light .back-btn {
+    background-color: #000000;
+    color: #fff;
+}
+
+.dark .moon {
+    display: block;
+}
+
+.dark footer {
+    color: #fff;
+    background-color: #000000;
+}
+
+.dark .sun {
+    display: none;
 }
 
 /* Universal styles */
 * {
    font-family: Arial, Helvetica, sans-serif;
-   background-color: var(--light-theme-background);
    margin: 0;
    padding: 0;
    transition: background-color .25s, color .24s;
@@ -26,7 +69,6 @@ body.dark-theme {
 
 body {
     margin-right: 5px;
-    border-right-color: #000000;
     border-right-width: 5px;
     border-style: solid;
 }
@@ -36,7 +78,6 @@ body {
     /* Justifying the header content to the right and giving it a double border */
     header {
         height: 60px;
-        border-bottom-color: var(--light-theme-border-color);
         border-bottom-style: double;
         border-bottom-width: 10px;
         align-content: center;
@@ -57,13 +98,14 @@ body {
     .back-btn {
         border-color: transparent;
         outline: none;
-        background-color: var(--light-theme-button-color);
-        color: var(--light-theme-button-text-color);
         font-size: 10px;
         font-weight: bold;
         padding: 8px;
         border-radius: 4px;
+        background-color: #fff;
+        color: #000000;
     }
+    
 
     /* The theme toggle button needs to have a transparent background and no outline */
     .theme-toggle-btn {
@@ -73,7 +115,18 @@ body {
         padding-right: 20px;
     }
 
+    .moon {
+        display: none;
+    }
+
+
 main {
 display: flex;
 height: 60vh;
+}
+
+.blog-container {
+    border-bottom-style: double;
+    border-bottom-width: 10px;
+    width:100%;
 }
