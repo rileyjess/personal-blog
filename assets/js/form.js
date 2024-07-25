@@ -16,11 +16,9 @@ function displayMessage(type, message) {
 submitButton.addEventListener('click', function (event) {
     event.preventDefault();
     
-    const blogSubmission = {
-        username: username.value,
-        blogTitle: blogTitle.value,
-        blogContent: blogContent.value,
-    }
+    const username = document.querySelector('#username').value;
+    const blogTitle = document.querySelector('#blog-title').value;
+    const blogContent = document.querySelector('#blog-content').value;
   
     // If the username, title, or content fields do not have content, an error message will display
     if (username === '') {
@@ -35,7 +33,11 @@ submitButton.addEventListener('click', function (event) {
     }
 
     // Save items to local storage
-    localStorage.setItem('blogSubmission', JSON.stringify(blogSubmission));
+    localStorage.setItem('Username', username);
+    localStorage.setItem('Blog-Title', blogTitle);
+    localStorage.setItem('Blog-Content', blogContent);
 
-    console.log(blogSubmission);
+    console.log(username);
+    console.log(blogTitle);
+    console.log(blogContent);
 });
