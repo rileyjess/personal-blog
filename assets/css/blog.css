@@ -113,7 +113,6 @@ body {
         color: #fff;
         margin-right: 20px;
     }
-    
 
     /* The theme toggle button needs to have a transparent background and no outline */
     .theme-toggle-btn {
@@ -133,12 +132,14 @@ display: flex;
 height: 60vh;
 }
 
+/* The main blog container */
 .blog-container {
     border-bottom-style: double;
     border-bottom-width: 10px;
     width:100%;
 }
 
+/* Footer */
 footer {
     margin: 10px;
     font-size: 10px;

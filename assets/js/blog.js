@@ -19,10 +19,8 @@ themeChange.addEventListener('click', function () {
     }
 });
 
-// Retrieve the form submission information from local storage
 
-// Display the form inputs as a new post
-
+// Retrieve the form submission information from local storage, then display the form inputs as a new blog post
 const blogContainer = document.querySelector('.blog-container');
 
 function displayBlogPost() {
@@ -53,38 +51,8 @@ function displayBlogPost() {
     blogContainer.appendChild(blogPostContainer);
 }};
 
-// function displayBlogPosts() {
-//   const blogPost = JSON.parse(localStorage.getItem('storedBlogPost'));
 
-//   if (blogPost)
-//   const blogPostArray =  Object.keys(blogPost).map(key => blogPost[key]);
-
-//   if (blogPostArray !== null) {
-//     blogPostArray.forEach(post => {
-//       const blogPostContainer = document.createElement("div");
-//       blogPostContainer.setAttribute('class', 'blog-post');
-
-//       const blogPostTitle = document.createElement("h2");
-//       blogPostTitle.setAttribute('class', 'blog-header');
-//       blogPostTitle.textContent = blogPosts.blogTitle;
-//       blogPostContainer.appendChild(blogPostTitle);
-
-//       const blogPostContent = document.createElement("p");
-//       blogPostContent.setAttribute('class', 'blog-content-text');
-//       blogPostContent.textContent = blogPosts.blogContent;
-//       blogPostContainer.appendChild(blogPostContent);
-
-//       const blogPostUsername = document.createElement("p");
-//       blogPostUsername.setAttribute('class', 'blog-username-text');
-//       blogPostUsername.textContent = 'Posted by: ' + blogPosts.username;
-//       blogPostContainer.appendChild(blogPostUsername);
-
-//       blogContainer.appendChild(blogPostContainer);
-//     });
-//   }
-// }
-
-
+// When the page loads, the blogs will be displayed
 function init() {
     displayBlogPost();
 }
