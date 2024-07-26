@@ -16,7 +16,7 @@ function displayMessage(type, message) {
 submitButton.addEventListener('click', function (event) {
     event.preventDefault();
 
-    const blogPosts = {
+    const blogPost = {
       blogTitle: blogTitle.value,
       blogContent: blogContent.value.trim(),
       username: username.value,
@@ -35,5 +35,5 @@ submitButton.addEventListener('click', function (event) {
     }
 
     // Save items to local storage
-    localStorage.setItem('storedBlogPosts', JSON.stringify(blogPosts));
+    localStorage.setItem('storedBlogPost', JSON.stringify(blogPost));
 });
