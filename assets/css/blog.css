@@ -21,7 +21,7 @@
     border-bottom-color: #000000;
 }
 
-.light footer {
+.light .footer {
    background-color: #fff;
    color: #000000;
 }
@@ -31,6 +31,7 @@
 .dark header {
     border-bottom-color: #fff;
     background-color: #000000;
+    color: #fff;
 }
 
 .dark .blog-container {
@@ -40,7 +41,7 @@
     border-bottom-color: #fff;
 }
 
-.light .back-btn {
+.dark .back-btn {
     background-color: #000000;
     color: #fff;
 }
@@ -49,9 +50,10 @@
     display: block;
 }
 
-.dark footer {
+.dark .footer {
     color: #fff;
     background-color: #000000;
+    text-decoration: none;
 }
 
 .dark .sun {
@@ -71,6 +73,7 @@ body {
     margin-right: 5px;
     border-right-width: 5px;
     border-style: solid;
+    height: 100vh;
 }
 
 /* Navigation */
@@ -89,6 +92,10 @@ body {
         justify-content: space-between;
     }
 
+    h1 {
+        padding-left: 10px;
+    }
+
     .nav-btns {
         display: flex;
         align-items: center;
@@ -102,8 +109,9 @@ body {
         font-weight: bold;
         padding: 8px;
         border-radius: 4px;
-        background-color: #fff;
-        color: #000000;
+        background-color: #000000;
+        color: #fff;
+        margin-right: 20px;
     }
     
 
@@ -129,4 +137,10 @@ height: 60vh;
     border-bottom-style: double;
     border-bottom-width: 10px;
     width:100%;
+}
+
+footer {
+    margin: 10px;
+    font-size: 10px;
+    font-style: italic;
 }
