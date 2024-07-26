@@ -6,40 +6,66 @@
 
 const blogContainer = document.querySelector('.blog-container');
 
-function createBlogPost() {
+// function displayBlogPosts() {
 
-  const username = localStorage.getItem('Username');
-  const blogTitle = localStorage.getItem('Blog-Title');
-  const blogContent = localStorage.getItem('Blog-Content');
+//   const blogPosts = JSON.parse(localStorage.getItem('storedBlogPosts'));
 
-  console.log(username);
-  console.log(blogTitle);
-  console.log(blogContent);
+//   console.log(blogPosts);
 
-  if (blogContent !== null) {
-    const blogPostContainer = document.createElement("div");
-    blogPostContainer.setAttribute('class', 'blog-post');
+//   if (blogPosts !== null) {
+//     const blogPostContainer = document.createElement("div");
+//     blogPostContainer.setAttribute('class', 'blog-post');
 
-    const blogPostTitle = document.createElement("h2");
-    blogPostTitle.setAttribute('class', 'blog-header');
-    blogPostTitle.textContent = blogTitle;
-    blogContainer.appendChild(blogPostTitle);
+//     const blogPostTitle = document.createElement("h2");
+//     blogPostTitle.setAttribute('class', 'blog-header');
+//     blogPostTitle.textContent = blogPosts.blogTitle;
+//     blogContainer.appendChild(blogPostTitle);
 
-    const blogPostContent = document.createElement("p");
-    blogPostContent.setAttribute('class', 'blog-content-text');
-    blogPostContent.textContent = blogContent;
-    blogContainer.appendChild(blogPostContent);
+//     const blogPostContent = document.createElement("p");
+//     blogPostContent.setAttribute('class', 'blog-content-text');
+//     blogPostContent.textContent = blogPosts.blogContent;
+//     blogContainer.appendChild(blogPostContent);
 
-    const blogPostUsername = document.createElement("p");
-    blogPostUsername.setAttribute('class', 'blog-username-text');
-    blogPostUsername.textContent = 'Posted by:' + '' + username;
-    blogContainer.appendChild(blogPostUsername);
+//     const blogPostUsername = document.createElement("p");
+//     blogPostUsername.setAttribute('class', 'blog-username-text');
+//     blogPostUsername.textContent = 'Posted by:' + ' ' + blogPosts.username;
+//     blogContainer.appendChild(blogPostUsername);
 
-    blogContainer.appendChild(blogPostContainer);
-}};
+//     blogContainer.appendChild(blogPostContainer);
+// }};
+
+function displayBlogPosts() {
+  const blogPosts = JSON.parse(localStorage.getItem('storedBlogPosts'));
+  const blogPostsArray =  Object.keys(blogPosts).map(key => blogPosts[key]);
+
+  if (blogPostsArray !== null) {
+    blogPostsArray.forEach(post => {
+      const blogPostContainer = document.createElement("div");
+      blogPostContainer.setAttribute('class', 'blog-post');
+
+      const blogPostTitle = document.createElement("h2");
+      blogPostTitle.setAttribute('class', 'blog-header');
+      blogPostTitle.textContent = blogPosts.blogTitle;
+      blogPostContainer.appendChild(blogPostTitle);
+
+      const blogPostContent = document.createElement("p");
+      blogPostContent.setAttribute('class', 'blog-content-text');
+      blogPostContent.textContent = blogPosts.blogContent;
+      blogPostContainer.appendChild(blogPostContent);
+
+      const blogPostUsername = document.createElement("p");
+      blogPostUsername.setAttribute('class', 'blog-username-text');
+      blogPostUsername.textContent = 'Posted by: ' + blogPosts.username;
+      blogPostContainer.appendChild(blogPostUsername);
+
+      blogContainer.appendChild(blogPostContainer);
+    });
+  }
+}
+
 
 function init() {
-    createBlogPost();
+    displayBlogPosts();
 }
   
 init();

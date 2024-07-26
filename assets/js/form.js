@@ -15,17 +15,19 @@ function displayMessage(type, message) {
 // When the submit button is clicked, the username, title, and content will saved to local storage
 submitButton.addEventListener('click', function (event) {
     event.preventDefault();
-    
-    const username = document.querySelector('#username').value;
-    const blogTitle = document.querySelector('#blog-title').value;
-    const blogContent = document.querySelector('#blog-content').value;
+
+    const blogPosts = {
+      blogTitle: blogTitle.value,
+      blogContent: blogContent.value.trim(),
+      username: username.value,
+    }
   
     // If the username, title, or content fields do not have content, an error message will display
-    if (username === '') {
+    if (username.value === '') {
       displayMessage('error', 'Username cannot be blank! Please add a username before continuing.');
-    } else if (blogTitle === '') {
+    } else if (blogTitle.value === '') {
       displayMessage('error', 'Title cannot be blank! Please add a title before continuing.');
-    } else if (blogContent === '') {
+    } else if (blogContent.value === '') {
       displayMessage('error', 'Content cannot be blank! Please add content before continuing.');
     //   If there are no errors, clicking the button will bring the user to the blog page
     } else {
@@ -33,11 +35,5 @@ submitButton.addEventListener('click', function (event) {
     }
 
     // Save items to local storage
-    localStorage.setItem('Username', username);
-    localStorage.setItem('Blog-Title', blogTitle);
-    localStorage.setItem('Blog-Content', blogContent);
-
-    console.log(username);
-    console.log(blogTitle);
-    console.log(blogContent);
+    localStorage.setItem('storedBlogPosts', JSON.stringify(blogPosts));
 });
