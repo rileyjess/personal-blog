@@ -18,9 +18,10 @@ Acceptance Criteria:
 - When the user views the footer, they are presented with a link to the developer's portfolio.
 
 ## Website Screenshot
+![Webpage-screenshot](https://github.com/user-attachments/assets/fe772b93-8b87-4d9f-be6b-b7d6257f686a)
 
 ## Deployed Website URL
-https://rileyjess.github.io/oak-tree/
+https://rileyjess.github.io/personal-blog/
 
 ## License
 MIT License
