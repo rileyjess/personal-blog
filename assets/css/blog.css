@@ -18,15 +18,33 @@
     border-right-color: #000000;
     background-color: #fff;
     color: #000000;
-    border-bottom-color: #000000;
 }
 
-.light .footer {
+.light .blog-post {
+    border-color: #000000;
+}
+
+.light .blog-content-text {
+    border-top-color:#000000;
+}
+
+.light footer {
    background-color: #fff;
    color: #000000;
+   border-bottom-color: #000000;
+}
+
+.light footer a {
+    color: #000000;
+    text-decoration: none;
+    
 }
 
 /* Dark theme */
+
+.dark main {
+    background-color: #000000;
+}
 
 .dark header {
     border-bottom-color: #fff;
@@ -34,11 +52,22 @@
     color: #fff;
 }
 
+.dark * {
+    background-color: #000000 !important;
+}
+
 .dark .blog-container {
     border-right-color: #fff;
     background-color: #000000;
     color: #fff;
-    border-bottom-color: #fff;
+}
+
+.dark .blog-post {
+    border-color: #fff;
+}
+
+.dark .blog-content-text {
+    border-top-color:#fff;
 }
 
 .dark .back-btn {
@@ -50,9 +79,14 @@
     display: block;
 }
 
-.dark .footer {
+.dark footer {
     color: #fff;
     background-color: #000000;
+    border-top-color: #fff;
+}
+
+.dark footer a {
+    color: #fff;
     text-decoration: none;
 }
 
@@ -73,7 +107,13 @@ body {
     margin-right: 5px;
     border-right-width: 5px;
     border-style: solid;
-    height: 100vh;
+    min-height: 100vh;
+    position: relative;
+}
+
+main {
+    padding-bottom: 2.5rem;
+    height: 90vh;
 }
 
 /* Navigation */
@@ -93,7 +133,8 @@ body {
     }
 
     h1 {
-        padding-left: 10px;
+        padding-left: 15px;
+        padding-top: 5px;
     }
 
     .nav-btns {
@@ -129,19 +170,48 @@ body {
 
 main {
 display: flex;
-height: 60vh;
 }
 
 /* The main blog container */
 .blog-container {
-    border-bottom-style: double;
-    border-bottom-width: 10px;
     width:100%;
+}
+
+/* Blog post styles */
+.blog-post {
+    border-style: solid;
+    border-color: #000000;
+    border-radius: 5px;
+    margin: 15px;
+    padding: 10px;
+}
+
+.blog-header {
+    font-size: 16px;
+    padding-bottom: 2px;
+}
+
+.blog-content-text {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-top-style: solid;
+    border-top-color:#000000;
+    font-size: 12px;
+}
+
+.blog-username-text {
+    font-size: 12px;
 }
 
 /* Footer */
 footer {
-    margin: 10px;
+    padding: 10px;
     font-size: 10px;
     font-style: italic;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    border-top-style: double;
+    border-top-width: 10px;
 }

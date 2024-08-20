@@ -5,10 +5,12 @@
 
 .light input {
     border: 1px solid lightgray;
+    color: #000000;
 }
 
 .light #blog-content {
     border: 1px solid lightgray;
+    color: #000000;
 }
 
 .light .submit-btn {
@@ -23,10 +25,12 @@
 
 .dark input {
     border: 1px solid #fff;
+    color: #fff;
 }
 
 .dark #blog-content {
     border: 1px solid #fff;
+    color: #fff;
 }
 
 .dark .submit-btn {

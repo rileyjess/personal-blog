@@ -23,30 +23,30 @@ themeChange.addEventListener('click', function () {
 // Retrieve the form submission information from local storage, then display the form inputs as a new blog post
 const blogContainer = document.querySelector('.blog-container');
 
-function displayBlogPost() {
+function displayBlogPosts() {
 
-  const blogPost = JSON.parse(localStorage.getItem('storedBlogPost'));
+  const blogPosts = JSON.parse(localStorage.getItem('storedBlogPosts')) || [];
 
-  console.log(blogPost);
+  console.log(blogPosts);
 
-  if (blogPost !== null) {
+  for (let i = 0; i < blogPosts.length; i++) {
     const blogPostContainer = document.createElement("div");
     blogPostContainer.setAttribute('class', 'blog-post');
 
     const blogPostTitle = document.createElement("h2");
     blogPostTitle.setAttribute('class', 'blog-header');
-    blogPostTitle.textContent = blogPost.blogTitle;
-    blogContainer.appendChild(blogPostTitle);
+    blogPostTitle.textContent = blogPosts[i].title;
+    blogPostContainer.appendChild(blogPostTitle);
 
     const blogPostContent = document.createElement("p");
     blogPostContent.setAttribute('class', 'blog-content-text');
-    blogPostContent.textContent = blogPost.blogContent;
-    blogContainer.appendChild(blogPostContent);
+    blogPostContent.textContent = blogPosts[i].content;
+    blogPostContainer.appendChild(blogPostContent);
 
     const blogPostUsername = document.createElement("p");
     blogPostUsername.setAttribute('class', 'blog-username-text');
-    blogPostUsername.textContent = 'Posted by:' + ' ' + blogPost.username;
-    blogContainer.appendChild(blogPostUsername);
+    blogPostUsername.textContent = 'Posted by:' + ' ' + blogPosts[i].username;
+    blogPostContainer.appendChild(blogPostUsername);
 
     blogContainer.appendChild(blogPostContainer);
 }};
@@ -54,7 +54,7 @@ function displayBlogPost() {
 
 // When the page loads, the blogs will be displayed
 function init() {
-    displayBlogPost();
+    displayBlogPosts();
 }
   
 init();

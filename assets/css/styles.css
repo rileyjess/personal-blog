@@ -13,6 +13,7 @@
     .light .right-side {
        background-color: #fff;
     }
+    
 
     .light .moon {
         display: none;
@@ -49,6 +50,7 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+   transition: background-color .25s, color .24s;
 }
 
 
